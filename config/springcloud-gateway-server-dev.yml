@@ -1,2 +1,16 @@
 server:
-  port: 8400 # 端口自己决定
+  port: 8400
+spring:
+  application:
+    name: springcloud-gateway-server
+  cloud:
+    gateway:
+      enabled: true  #开启网关
+      discovery:
+        locator:
+          enabled: true #开启自动路由,以服务id建立路由，服务id默认大写
+          lower-case-service-id: true #服务id设置为小写
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.73.110:9200/eureka/
