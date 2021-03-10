@@ -1,8 +1,4 @@
-server:
-  port: 8400
 spring:
-  application:
-    name: springcloud-gateway-server
   cloud:
     gateway:
       enabled: true  #开启网关
